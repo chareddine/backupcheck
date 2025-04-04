@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 # Prompt for username
 read -p "Enter the customer username: " customerusername
 
@@ -8,9 +10,9 @@ echo "Running disk usage for /home/$customerusername (1st time)..."
 first=$(du -s "/home/$customerusername" | cut -f1)
 echo "Disk usage at first check: $first KB"
 
-# Wait 3 minutes (180 seconds)
-echo "Waiting for 3 minutes..."
-sleep 18
+# Wait 1 minutes
+echo "Waiting for 1 minute..."
+sleep 80
 
 # Second run
 echo "Running disk usage for /home/$customerusername (2nd time)..."
